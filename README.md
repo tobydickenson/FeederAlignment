@@ -32,3 +32,5 @@ This requires openpnp test branch version from 20205-09-18 or later.
 * After moving a feeder, select `Realign feeder pick location restart` from openpnp's
   `Scripts` menu, and select the name of the feeder which moved (or 'All'). This
   temporarily increases the control loop gain for the next few alignments.
+
+![Two Picks](images/twopicks.jpg)

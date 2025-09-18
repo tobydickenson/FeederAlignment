@@ -13,9 +13,22 @@ from the same feeder. Note that the pick location needs to have been configured 
 sufficient accuracy to allow the first pick to complete; but this new control loop
 can fine tune the pick location and keep it it accurate if the tape wanders.
 
-This version currently works with ReferencePushPull feeder, and it assumes that the
+This version currently works with ReferencePushPullFeeder, and it assumes that the
 vision features provided by that class have been disabled. Unfortunately there is no
 feeder API to adjust the pick location, so class-specific customisation will be needed
 for other types of feeder.
 
 This requires openpnp test branch version from 20205-09-18 or later.
+
+## Installation
+
+1. Copy the contents of the `scripts` directory into `~/.openpnp2/scripts`
+2. Copy the contents of the `scripts/Events` directory into `~/.openpnp2/scripts/Events`
+
+## Usage
+
+* ReferencePushPullFeeder pick positions will be automatically adjusted. This adjustment
+  is restricted to small parts, and picks with negligble angular error.
+* After moving a feeder, select `Realign feeder pick location restart` from openpnp's
+  `Scripts` menu, and select the name of the feeder which moved (or 'All'). This
+  temporarily increases the control loop gain for the next few alignments.

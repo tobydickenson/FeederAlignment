@@ -1,3 +1,7 @@
+# READ THIS FIRST
+
+These scripts have been superceded by https://github.com/openpnp/openpnp/pull/1993
+
 # Openpnp Feeder Alignment
 
 This is a set of scripts for openpnp which implement a control loop for feeder pick position
